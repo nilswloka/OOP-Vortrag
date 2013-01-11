@@ -1,7 +1,14 @@
-.screenshot
+.imageFullHeight
 {
-    width: 320px;
+    height: 70%;
 }
+
+.opitzNoBorderImage{
+    border: none!important;
+    box-shadow: none!important;
+}
+
+
 
 div{
     border:blue;

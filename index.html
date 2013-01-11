@@ -13,7 +13,8 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
 
     <link rel="stylesheet" href="css/reveal.min.css">
-    <link rel="stylesheet" href="css/theme/default.css" id="theme">
+    <link rel="stylesheet" href="css/theme/opitz.css" id="theme">
+
 
     <!-- For syntax highlighting -->
     <link rel="stylesheet" href="lib/css/zenburn.css">
@@ -38,23 +39,22 @@
 <!-- Any section element inside of this container is displayed as a slide -->
 <div class="slides">
 <section>
+    <h1>ADF Mobile</h1>
 
-    <h1>DOAG - ADF Mobile</h1>
-
-    <p>Ein erster Einblick mit OPITZ CONSULTING&nbsp;</p>
+    <p>Ein Erfahrungsbericht</p>
 </section>
 <section>
 
     <section><img src="images/smartphones.jpg" height="480px;"></section>
 
     <section>
-        <iframe src="http://www.android.com/devices/" frameborder="0" width="90%" height="90%"></iframe>
+        <iframe src="http://www.android.com/devices/" frameborder="0" class="imageFullHeight"></iframe>
     </section>
 
-    <section><img src="images/cattle.png" alt=""></section>
+    <section><img src="images/cattle.png" alt="" class="imageFullHeight"></section>
 </section>
 <section>
-    <section><h2>ADF Mobile</h2>
+    <section><h1>ADF Mobile</h1>
 
         <div>Entwickeln für iOS und Android gleichzeitig</div>
         <br>
@@ -189,7 +189,7 @@
     <h4>Demo</h4>
 
     <div>
-        <video width="80%"c id="webcamOutput"></video>
+        <video class="imageFullHeight" id="webcamOutput"></video>
 
 
         <script type="text/javascript">
@@ -198,7 +198,7 @@
                     navigator.mozGetUserMedia || navigator.msGetUserMedia;
             window.URL = window.URL || window.webkitURL;
 
-            navigator.getUserMedia({video:true}, function (localMediaStream) {
+            navigator.getUserMedia({video: true}, function (localMediaStream) {
                 var video = document.getElementById("webcamOutput");
                 video.autoplay = true;
                 video.src = window.URL.createObjectURL(localMediaStream);
@@ -217,8 +217,10 @@
 
     <section>
         <div id="performance"><h4>Performance</h4>
-            <nobr><img src="images/spinning_wheel.png" class="screenshot"><img src="images/spinning_wheel2.png"
-                                                                               class="screenshot"></nobr>
+            <nobr>
+                <img src="images/spinning_wheel.png" class="imageFullHeight">
+                <img src="images/spinning_wheel2.png"  class="imageFullHeight">
+            </nobr>
         </div>
 
     </section>
@@ -254,8 +256,10 @@
 
         <div>AMX Pages => Views</div>
         <br>
+
         <div>pageFlows & JavaBeans => Controller</div>
         <br>
+
         <div>Java Layer (Data Binding) => Model</div>
     </section>
 
@@ -308,32 +312,32 @@
     // Full list of configuration options available here:
     // https://github.com/hakimel/reveal.js#configuration
     Reveal.initialize({
-        controls:false,
-        progress:true,
-        history:true,
-        center:true,
+        controls: false,
+        progress: true,
+        history: true,
+        center: true,
 
-        theme:Reveal.getQueryHash().theme || 'sky', // available themes are in /css/theme
-        transition:Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+        theme: Reveal.getQueryHash().theme || 'opitz', // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
 
         // Optional libraries used to extend on reveal.js
-        dependencies:[
-            { src:'lib/js/classList.js', condition:function () {
+        dependencies: [
+            { src: 'lib/js/classList.js', condition: function () {
                 return !document.body.classList;
             } },
-            { src:'plugin/markdown/showdown.js', condition:function () {
+            { src: 'plugin/markdown/showdown.js', condition: function () {
                 return !!document.querySelector('[data-markdown]');
             } },
-            { src:'plugin/markdown/markdown.js', condition:function () {
+            { src: 'plugin/markdown/markdown.js', condition: function () {
                 return !!document.querySelector('[data-markdown]');
             } },
-            { src:'plugin/highlight/highlight.js', async:true, callback:function () {
+            { src: 'plugin/highlight/highlight.js', async: true, callback: function () {
                 hljs.initHighlightingOnLoad();
             } },
-            { src:'plugin/zoom-js/zoom.js', async:true, condition:function () {
+            { src: 'plugin/zoom-js/zoom.js', async: true, condition: function () {
                 return !!document.body.classList;
             } },
-            { src:'plugin/notes/notes.js', async:true, condition:function () {
+            { src: 'plugin/notes/notes.js', async: true, condition: function () {
                 return !!document.body.classList;
             } }
             // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
