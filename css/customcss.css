@@ -1,0 +1,15 @@
+.screenshot
+{
+    width: 320px;
+}
+
+div{
+    border:blue;
+    border-width: 1px;
+}
+
+.qr_captions
+{
+    font-size: 70%;
+    font-weight: 400;
+}

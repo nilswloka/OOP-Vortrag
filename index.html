@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>ADF Mobile </title>
+
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+        document.write('<link rel="stylesheet" href="css/print/' + ( window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">');
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!--custom css-->
+    <link rel="stylesheet" href="css/customcss.css">
+</head>
+
+<body>
+
+<div class="reveal">
+
+<!-- Any section element inside of this container is displayed as a slide -->
+<div class="slides">
+<section>
+
+    <h1>DOAG - ADF Mobile</h1>
+
+    <p>Ein erster Einblick mit OPITZ CONSULTING&nbsp;</p>
+</section>
+<section>
+
+    <section><img src="images/smartphones.jpg" height="480px;"></section>
+
+    <section>
+        <iframe src="http://www.android.com/devices/" frameborder="0" width="90%" height="90%"></iframe>
+    </section>
+
+    <section><img src="images/cattle.png" alt=""></section>
+</section>
+<section>
+    <section><h2>ADF Mobile</h2>
+
+        <div>Entwickeln für iOS und Android gleichzeitig</div>
+        <br>
+
+        <div>Java im Model & Controller</div>
+        <br>
+
+        <div>UI deklarativ entwickeln</div>
+    </section>
+    <section>
+
+        <h2>Beispiel-Apps von Oracle</h2>
+    </section>
+    <section>
+
+        <h3>Component Galery</h3>
+
+        <div>Demonstriert die meisten UI-Komponenten</div>
+
+
+    </section>
+    <section>
+
+        <h3>Device Demo</h3>
+
+        <div>Demonstriert Zugriff auf Gerätefunktionen (via phoneGap)</div>
+
+    </section>
+    <section>
+
+        <ul>
+            <li>seltsame Email &amp; SMS Umsetzung</li>
+            <li>Kontakte &amp; Fotos funktionieren</li>
+        </ul>
+
+
+    </section>
+    <section>
+
+        <h3>Gesture Demo</h3>
+
+        <div>Zeigt mögliche Gesten</div>
+
+    </section>
+    <section>
+
+        <ul>
+            <li>Viele Gestures unterstützt<br>
+            </li>
+            <li>UI unter Android sehr langsam<br>
+            </li>
+            <ul>
+                <li>(Xoom ICS, Nexus S Jelly Bean)</li>
+            </ul>
+            <li>Einfaches XML Attribut: <span style="font-family: monospace;">type="swipeLeft"</span></li>
+        </ul>
+
+
+    </section>
+
+    <section>
+
+
+        <h3>HR</h3>
+
+        <div>Master-Detail List-View mit Filter &amp; Edit</div>
+    </section>
+    <section>
+
+        <ul>
+            <li>funktioniert auf allen Geräten<br>
+            </li>
+            <li>Besondere UI für Tablets integriert</li>
+        </ul>
+
+    </section>
+    <section>
+
+        <h3>Java Demo</h3>
+
+        <div>Zeigt Controllermöglichkeiten mit Java Layer</div>
+    </section>
+    <section>
+        <ul>
+            <li>Boolean-UI-Switch bei Android nicht intuitiv bedienbar</li>
+        </ul>
+    </section>
+    <section>
+
+        <h3>Layout Demo</h3>
+
+        <div>Demonstriert verschiedene Layout Möglichkeiten</div>
+    </section>
+    <section>
+        <ul>
+            <li>Pop-Up Menüs im iOS Stil</li>
+            <li>Screen-Rotation-Event unter iOS nicht getriggered</li>
+            <ul>
+                <li>Unter Android funktionstüchtig</li>
+            </ul>
+        </ul>
+    </section>
+    <section>
+
+        <h3>Navigation</h3>
+
+        <div>Demonstriert Transitions, Routings und Task-Flow Navigation</div>
+    </section>
+    <section>
+        <ul>
+            <li>funktioniert gut, modularer Aufbau von Features wird gut unterstützt</li>
+        </ul>
+    </section>
+    <section>
+
+
+        <h3>Skinning</h3>
+
+        <div>Demonstriert Skinning in Abhängigkeit von Gerätetyp</div>
+    </section>
+    <section>
+        <ul>
+            <li>Zeigt Skinningmöglichkeiten sowie setzen von Abhängigkeiten</li>
+            <li>Türen für Progressive Enhancement offen</li>
+        </ul>
+    </section>
+
+</section>
+<!--Ende BSP Apps Section-->
+
+<section><!-- webcam section for showing apps-->
+    <h4>Demo</h4>
+
+    <div>
+        <video width="80%"c id="webcamOutput"></video>
+
+
+        <script type="text/javascript">
+
+            navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia ||
+                    navigator.mozGetUserMedia || navigator.msGetUserMedia;
+            window.URL = window.URL || window.webkitURL;
+
+            navigator.getUserMedia({video:true}, function (localMediaStream) {
+                var video = document.getElementById("webcamOutput");
+                video.autoplay = true;
+                video.src = window.URL.createObjectURL(localMediaStream);
+            }, function (error) {
+                console.log(error);
+            });
+
+
+        </script>
+    </div>
+
+</section>
+
+<section>
+    <section><h2>Beurteilung</h2></section>
+
+    <section>
+        <div id="performance"><h4>Performance</h4>
+            <nobr><img src="images/spinning_wheel.png" class="screenshot"><img src="images/spinning_wheel2.png"
+                                                                               class="screenshot"></nobr>
+        </div>
+
+    </section>
+    <section><h4>Appgröße</h4><img src="images/size_app.png" class="screenshot"></section>
+    <section>
+        <div><h4>jDeveloper Stabilität</h4><img src="images/severe_error.png" alt=""></div>
+    </section>
+    <section>
+        <h4>IDE</h4>
+
+        <div>
+            <img src="images/highlighting_jdev.png">
+
+            <div style="font-size: small">jdeveloper</div>
+        </div>
+        <div>
+            <img src="images/highlighting_intelli.png">
+
+            <div style="font-size: small">IntelliJ</div>
+        </div>
+    </section>
+
+    <section>
+        <img src="images/java.png" alt="">
+    </section>
+
+    <section>
+        <h4>TaskFlows</h4>
+        <img src="images/taskFlow.gif" alt="">
+    </section>
+    <section>
+        <h3>MVC</h3>
+
+        <div>AMX Pages => Views</div>
+        <br>
+        <div>pageFlows & JavaBeans => Controller</div>
+        <br>
+        <div>Java Layer (Data Binding) => Model</div>
+    </section>
+
+</section>
+<section><h2>Fazit</h2>
+
+    <div>
+        <div>Idee: Top!</div>
+        <div>Umsetzung: Bedarf noch etwas Arbeit</div>
+        <br>
+
+        <div>Abwarten! Vorerst auf Webtechnologie setzen</div>
+    </div>
+    <div style="width: 700px; margin: 0 auto;"><img src="images/buch.jpg" height="250px"><img src="images/OC.jpg"
+                                                                                              style="vertical-align: top; margin-top: 80px">
+    </div>
+
+</section>
+<section><h2>Zu wenig?</h2>
+
+
+    <div style="width: 49%; height:400px; float: left">
+        <div style="font-size: 70%;">Kontaktinformationen</div>
+
+        <img src="images/qr_card.png" style="border: none" width="99%"><br>
+
+
+    </div>
+
+    <div style="width: 49%; height:400px; float: left; vertical-align: middle;">
+        <div style="font-size: 70%;">Semesterarbeit: <br>Vergleich ADF Mobile & <br> Mobile HTML5 Webapps</div>
+
+        <img src="images/qr_arbeit.png" width="50%" style="border: none; vertical-align: bottom;">
+
+
+    </div>
+
+
+</section>
+
+</div>
+
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+
+<script>
+
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls:false,
+        progress:true,
+        history:true,
+        center:true,
+
+        theme:Reveal.getQueryHash().theme || 'sky', // available themes are in /css/theme
+        transition:Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies:[
+            { src:'lib/js/classList.js', condition:function () {
+                return !document.body.classList;
+            } },
+            { src:'plugin/markdown/showdown.js', condition:function () {
+                return !!document.querySelector('[data-markdown]');
+            } },
+            { src:'plugin/markdown/markdown.js', condition:function () {
+                return !!document.querySelector('[data-markdown]');
+            } },
+            { src:'plugin/highlight/highlight.js', async:true, callback:function () {
+                hljs.initHighlightingOnLoad();
+            } },
+            { src:'plugin/zoom-js/zoom.js', async:true, condition:function () {
+                return !!document.body.classList;
+            } },
+            { src:'plugin/notes/notes.js', async:true, condition:function () {
+                return !!document.body.classList;
+            } }
+            // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+    });
+
+</script>
+
+
+</body>
+</html>
