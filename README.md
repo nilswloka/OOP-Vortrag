@@ -9,6 +9,12 @@ OPITZ CONSULTING Deutschland GmbH
 
 ## Anleitung
 
+### Hosten
+
+$ node plugin/notes-server
+
+### Styles & co
+
 h1 - h3 Unterstützt
 
 Styles in css/theme/opitz.css
